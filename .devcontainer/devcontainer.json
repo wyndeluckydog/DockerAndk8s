@@ -1,6 +1,9 @@
 {
   "name": "CentOS Development Server",
-  "image": "mcr.microsoft.com/devcontainers/base:centos",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:1": {
       "version": "latest",
