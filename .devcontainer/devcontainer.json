@@ -1,8 +1,11 @@
 {
-  "name": "Docker and Kubernetes",
+  "name": "Docker & Kubernetes",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": "true"
+    },
     "ghcr.io/devcontainers/features/kubectl:1": {}
   },
   "customizations": {
@@ -12,5 +15,6 @@
         "ms-kubernetes-tools.vscode-kubernetes-tools"
       ]
     }
-  }
+  },
+  "postCreateCommand": "git config --global user.name 'Your Name' && git config --global user.email 'your@email.com'"
 }
