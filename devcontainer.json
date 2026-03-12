@@ -1,0 +1,16 @@
+{
+  "name": "Docker and Kubernetes",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+    "ghcr.io/devcontainers/features/kubectl:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+      ]
+    }
+  }
+}
