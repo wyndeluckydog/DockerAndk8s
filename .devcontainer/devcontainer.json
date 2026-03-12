@@ -1,6 +1,6 @@
 {
-  "name": "Custom Development Server",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "name": "CentOS Development Server",
+  "image": "mcr.microsoft.com/devcontainers/base:centos",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:1": {
       "version": "latest",
