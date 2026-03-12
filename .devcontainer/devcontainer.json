@@ -1,20 +1,27 @@
 {
-  "name": "Docker & Kubernetes",
+  "name": "Custom Development Server",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:1": {
       "version": "latest",
       "enableNonRootDocker": "true"
     },
-    "ghcr.io/devcontainers/features/kubectl:1": {}
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10"
+    }
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-azuretools.vscode-docker",
-        "ms-kubernetes-tools.vscode-kubernetes-tools"
+        "ms-python.python",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
       ]
     }
   },
-  "postCreateCommand": "git config --global user.name 'Your Name' && git config --global user.email 'your@email.com'"
+  "postCreateCommand": "npm install -g yarn && pip install --upgrade pip"
 }
