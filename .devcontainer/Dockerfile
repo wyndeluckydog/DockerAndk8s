@@ -1,7 +1,8 @@
-FROM centos:latest
+FROM centos:7
 
 # Install basic development tools
 RUN yum update -y && \
+    yum install -y epel-release && \
     yum install -y \
         curl \
         wget \
